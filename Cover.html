@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abstract Showroom</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Helvetica Neue', sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #f4f4f2, #eaeaea, #dcdcdc, #f4f4f2);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .lines {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(135deg, rgba(0,0,0,0.03) 1px, transparent 1px),
+                        linear-gradient(45deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: 0;
+    }
+
+    .cover {
+      text-align: center;
+      padding: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title, .subtitle, .enter-button {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .title {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      letter-spacing: 2px;
+      color: #111;
+      animation-delay: 0.3s;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 2em;
+      animation-delay: 0.6s;
+    }
+
+    .enter-button {
+      padding: 12px 28px;
+      font-size: 1em;
+      border: none;
+      background-color: #111;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      animation-delay: 1s;
+    }
+
+    .enter-button:hover {
+      background-color: #333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="lines"></div>
+  <div class="cover">
+    <div class="title">Abstract Room</div>
+    <div class="subtitle">A quiet space for minimal lines and soft color.</div>
+    <a href="file:///Users/jiwonyu/Desktop/PARSONS/Core%201%20Fall/site_4/New.html">
+      <button class="enter-button">Enter</button>
+    </a>
+  </div>
+</body>
+</html>
